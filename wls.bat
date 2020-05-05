@@ -27,6 +27,10 @@ set show_hidden=
 
 :parse_args
 set dest=%1
+if "%dest%" == "/?" goto help
+if "%dest%" == "-h" goto help
+if "%dest%" == "--help" goto help
+
 if "%dest%" == "-a" (
     set show_hidden=1
     shift
@@ -55,3 +59,18 @@ if "%show_hidden%" == "1" (
 )
 
 exit /B %ERRORLEVEL%
+
+:help
+echo Usage: %0 [option] [dest]
+echo.
+echo [dest] is a valid Windows path
+echo When [dest] is empty, it implies current working directory
+echo.
+echo Option:
+echo.    /?     Show help info and exit
+echo     -h
+echo     --help
+echo.
+echo     -a     List hidden files and directories
+echo     --all
+exit /B 0
