@@ -1,4 +1,4 @@
-# `ls`
+# `wls`
 
 `wls` simulates Unix `ls(1)` for Windows.
 
