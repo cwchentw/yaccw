@@ -1,4 +1,4 @@
-# `pwd`
+# `wpwd`
 
 `wpwd` simulates Unix `pwd(1)` for Windows.
 
