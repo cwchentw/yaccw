@@ -1,4 +1,4 @@
-# `visit`
+# `wcd`
 
 Do you miss Unix `cd` while using a Windows machine? `wcd` is a Windows command to satisfy your Unix nostalgia.
 
