@@ -1,5 +1,5 @@
 @echo off
-rem ls.bat - Simulate Unix `ls` on Windows
+rem wls.bat - Simulate Unix `ls` on Windows
 rem Copyright (c) 2020 Michael Chen
 rem Licensed under MIT
 

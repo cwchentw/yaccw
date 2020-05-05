@@ -12,9 +12,9 @@ Each script is a self-contained Batch script. Just copy whatever you want to a v
 
 ## Documentation
 
-* [ls](/docs/ls.md): list files and directories
-* [pwd](/docs/pwd.md): show present working directory
-* [visit](/docs/visit.md): change working directory
+* [wcd](/docs/wcd.md): change working directory
+* [wls](/docs/wls.md): list files and directories
+* [wpwd](/docs/wpwd.md): show present working directory
 
 ## Copyright
 

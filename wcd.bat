@@ -1,5 +1,5 @@
 @echo off
-rem visit.bat - Simulate Unix `cd` on Windows
+rem wcd.bat - Simulate Unix `cd` on Windows
 rem Copyright (c) 2020 Michael Chen
 rem Licensed under MIT
 
