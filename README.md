@@ -15,6 +15,7 @@ Each script is a self-contained Batch script. Just copy whatever you want to a v
 * [wcd](/docs/wcd.md): change working directory
 * [wls](/docs/wls.md): list files and directories
 * [wpwd](/docs/wpwd.md): show present working directory
+* [wtouch](/docs/wtouch.md): create an empty text file on destination
 
 ## Copyright
 
