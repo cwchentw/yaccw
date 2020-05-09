@@ -1,6 +1,6 @@
-# File Utils for Windows
+# YACCW
 
-Common file utilities for Windows.
+Yet another collection of commands for Windows.
 
 ## System Requirements
 
@@ -8,7 +8,7 @@ Some scripts depend on either PowerShell Core or Windows PowerShell. Such script
 
 ## Installation
 
-Each script is a self-contained Batch script. Just copy whatever you want to a valid system path.
+Most scripts are self-contained Batch scripts. Just copy whatever you want to a valid system path.
 
 ## Documentation
 
