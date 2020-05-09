@@ -1,6 +1,6 @@
 # YACCW
 
-Yet another collection of commands for Windows.
+YACCW (Yet Another Collection of Commands for Windows) aims to provide self-contained Windows command-line utilites, aka the commands that only depend on built-in features available on Windows.
 
 ## System Requirements
 
