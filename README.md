@@ -17,6 +17,7 @@ Most scripts are self-contained Batch scripts. Just copy whatever you want to a 
 * [wls](/docs/wls.md): list files and directories
 * [wpwd](/docs/wpwd.md): show present working directory
 * [wtouch](/docs/wtouch.md): create an empty text file on destination
+* [wwhich](/docs/wwhich.md): check whether a command is available
 
 ## Copyright
 
