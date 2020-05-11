@@ -2,6 +2,10 @@
 
 Simulate Unix `which` on Windows.
 
+## System Requirements
+
+Either PowerShell Core or Windows PowerShell.
+
 ## Installation
 
 Download and move **both** [wwhich.ps1](/wwhich.ps1) and [wwhich.bat](/wwhich.bat) to the same system path.
