@@ -20,6 +20,12 @@ It works for PowerShell cmdlets as well:
 > wwhich Get-ChildItem
 ```
 
+Run `wwhich` with either `-a` or `--all` to show all possible file path(s):
+
+```
+> wwhich -a notepad
+```
+
 ## Copyright
 
 Copyright (c) 2020 Michael Chen. Licensed under MIT.
