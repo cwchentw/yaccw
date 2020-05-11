@@ -12,6 +12,7 @@ Most scripts are self-contained Batch scripts. Just copy whatever you want to a 
 
 ## Documentation
 
+* [wcat](/docs/wcat.md): concatenate one more text files
 * [wcd](/docs/wcd.md): change working directory
 * [wdl](/docs/wdl.md): download a file from a URL
 * [wls](/docs/wls.md): list files and directories
