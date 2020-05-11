@@ -13,6 +13,7 @@ Most scripts are self-contained Batch scripts. Just copy whatever you want to a 
 ## Documentation
 
 * [wcd](/docs/wcd.md): change working directory
+* [wdl](/docs/wdl.md): download a file from a URL
 * [wls](/docs/wls.md): list files and directories
 * [wpwd](/docs/wpwd.md): show present working directory
 * [wtouch](/docs/wtouch.md): create an empty text file on destination
