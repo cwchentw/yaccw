@@ -44,7 +44,7 @@ Invoke `wcd` with `-` to change working directory to last visited directory:
 > wcd -
 ```
 
-You have to keep using `wcd` istead to vanilla `cd` because `wcd` tracks your last visited directory in a text file. Use plain `cd` will lose correct visiting history recorded by `wcd`.
+You have to keep using `wcd` istead to vanilla `cd` because `wcd` tracks your last visited directory in a command prompt session variable. Use plain `cd` will lose correct visiting history recorded by `wcd`.
 
 ## Copyright
 
