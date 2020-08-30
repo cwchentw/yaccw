@@ -4,6 +4,9 @@ rem Copyright (c) 2020 Michael Chen.
 rem Licensed under MIT.
 
 
+rem Limit the scopes of the variables in this script.
+setlocal
+
 set dest=%1
 
 if "%dest%" == "" (
@@ -17,5 +20,5 @@ if exist "%dest%" (
 )
 
 rem Trick to supress newline on Command Prompt.
-echo|set /p= > "%dest%"
+echo|set /P= > "%dest%"
 exit /B %ERRORLEVEL%
