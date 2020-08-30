@@ -3,8 +3,11 @@ rem wwhich.bat - Simulate Unix which on Windows
 rem Copyright (c) 2020 Michael Chen
 rem Licensed under MIT.
 
-rem It depends on wwhich.ps1 at the same path.
+rem It depends on wwhich.ps1 at the same system path.
 
+
+rem Limit the scopes of the variables in the script.
+setlocal
 
 rem Clean old state.
 set pscmd=
