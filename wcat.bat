@@ -4,6 +4,9 @@ rem Copyright (c) 2020 Michael Chen.
 rem Licensed under MIT
 
 
+rem Limit the scopes of the variables of this script.
+setlocal
+
 :parse_args
 set arg=%1
 shift
