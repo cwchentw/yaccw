@@ -4,7 +4,7 @@ Simulate Unix `which` on Windows.
 
 ## System Requirements
 
-Either PowerShell Core or Windows PowerShell.
+Use either PowerShell Core or Windows PowerShell by default. Fallback to `where` if no PowerShell on the system.
 
 ## Installation
 
