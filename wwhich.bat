@@ -22,8 +22,7 @@ if "%pscmd%" == "" (
     powershell -Help 1>nul 2>&1 && (
         set pscmd=powershell
     ) || (
-        echo No PowerShell on the system >&2
-        exit /B 1
+        goto :fallback
     )
 )
 
@@ -35,3 +34,9 @@ if not exist %root_dir%\wwhich.ps1 (
 )
 
 %pscmd% -File %root_dir%\wwhich.ps1 %*
+
+exit /B %ERRORLEVEL%
+
+rem Use `where` as the fallback command.
+:fallback
+where %*
