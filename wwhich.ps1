@@ -10,18 +10,20 @@ param (
   [switch]$all = $false
 )
 
+# Show the help info and exit the program.
 if ($h -or $help) {
   Write-Output "Usage: $0 [option] [command]"
   Write-Output ""
   Write-Output "Option:"
-  Write-Output "  -h    --help    Show help info and exit"
-  Write-Output "  -a    --all     Show all possible path(s)"
+  Write-Output "  -h    -help     Show help info and exit"
+  Write-Output "  -a    -all      Show all possible path(s)"
   Write-Output ""
   Write-Output "[command] is the name of a console command"
 
   exit 0
 }
 
+# Check whether the target command exists.
 $targetCommand=$args[0]
 
 if (!$targetCommand) {
@@ -29,34 +31,52 @@ if (!$targetCommand) {
   exit 1
 }
 
-# Currently, we hard code specific environment variables.
-# Refactor it later.
-$systemRoot = [System.Environment]::ExpandEnvironmentVariables("%SystemRoot%");
-$userProfile = [System.Environment]::ExpandEnvironmentVariables("%USERPROFILE%");
+# Get all file extensions of executable.
+$exts = @()
+
+foreach ($ext in $env:pathext -Split ';') {
+  $exts += '*' + $ext
+}
+
+# .ps1 is not listed in $env:pathext.
+$exts += '*' + '.ps1'
+
+# Get all environment variables presenting paths.
+$envs = @{}
+
+foreach ($e in Get-ChildItem env:) {
+  if (($e.value -Match '^[a-z]\:\\') `
+      -and -not ($e.value -Match '\.[a-z]+$|;')) {
+    $envs.Add('%' + $e.Name + '%', $e.Value)
+  }
+}
 
 $found = $false
 
-Foreach($dir In $Env:Path -Split ';')
+# Search the target command in each path of PATH.
+foreach($dir In $Env:Path -Split ';')
 {
-  # Currently, we hard code specific environment variables.
-  # Refactor it later.
-  $dir = $dir -Replace '%USERPROFILE%',$userProfile
-  $dir = $dir -Replace '%SystemRoot%',$systemRoot
+  foreach($k In $envs.keys) {
+    $dir = $dir -Replace $k, $envs[$k]
+  }
 
-  Foreach($exec In Get-ChildItem $dir -Include *.exe, *.bat, *.com, *.cmd -Name -ErrorAction SilentlyContinue) {
+  foreach($exec In Get-ChildItem $dir -Include $exts -Name -ErrorAction SilentlyContinue) {
     $p = [io.path]::GetFileNameWithoutExtension($exec)
     $q = [io.path]::GetFileNameWithoutExtension($targetCommand)
 
     if ($p -eq $q) {
        Write-Output $dir\$exec
        $found = $true
-       break
+
+       if ((-not $a) -and (-not $all)) {
+        break
+       }
     }
   }
 
   # Only show the first path found unless
-  #  the user use either `-a` or `--all` argument.
-  if (-not ($a -or $all)) {
+  #  the user use either `-a` or `-all` argument.
+  if ((-not $a) -and (-not $all)) {
     if ($found) {
       break
     }
