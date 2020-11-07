@@ -27,7 +27,7 @@ if ($h -or $help) {
 $targetCommand = $args[0]
 
 if (!$targetCommand) {
-  [Console]::Error.WriteLine("No valid target");
+  Write-Error "No valid target"
   exit 1
 }
 
