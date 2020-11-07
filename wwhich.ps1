@@ -24,7 +24,7 @@ if ($h -or $help) {
 }
 
 # Check whether the target command exists.
-$targetCommand=$args[0]
+$targetCommand = $args[0]
 
 if (!$targetCommand) {
   [Console]::Error.WriteLine("No valid target");
@@ -54,23 +54,22 @@ foreach ($e in Get-ChildItem env:) {
 $found = $false
 
 # Search the target command in each path of PATH.
-foreach($dir In $Env:Path -Split ';')
-{
-  foreach($k In $envs.keys) {
+foreach ($dir In $Env:Path -Split ';') {
+  foreach ($k In $envs.keys) {
     $dir = $dir -Replace $k, $envs[$k]
   }
 
-  foreach($exec In Get-ChildItem $dir -Include $exts -Name -ErrorAction SilentlyContinue) {
+  foreach ($exec In Get-ChildItem $dir -Include $exts -Name -ErrorAction SilentlyContinue) {
     $p = [io.path]::GetFileNameWithoutExtension($exec)
     $q = [io.path]::GetFileNameWithoutExtension($targetCommand)
 
     if ($p -eq $q) {
-       Write-Output $dir\$exec
-       $found = $true
+      Write-Output $dir\$exec
+      $found = $true
 
-       if ((-not $a) -and (-not $all)) {
+      if ((-not $a) -and (-not $all)) {
         break
-       }
+      }
     }
   }
 
