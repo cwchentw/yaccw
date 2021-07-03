@@ -32,5 +32,4 @@ Run `wwhich` with either `-a` or `--all` to show all possible file path(s):
 
 ## Copyright
 
-Copyright (c) 2020 Michael Chen. Licensed under MIT.
-
+Copyright (c) 2020 Michelle Chen. Licensed under MIT

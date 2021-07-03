@@ -18,4 +18,4 @@ In contrary, when the destination exists, `wtouch` just view it with `dir` in th
 
 ## Copyright
 
-Copyright (c) 2020 Michael Chen. Licensed under MIT.
+Copyright (c) 2020 Michelle Chen. Licensed under MIT

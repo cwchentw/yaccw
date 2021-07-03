@@ -22,4 +22,4 @@ Maybe redirect the output to a new text file:
 
 ## Copyright
 
-Copyright (c) 2020 Michael Chen. Licensed under MIT.
+Copyright (c) 2020 Michelle Chen. Licensed under MIT

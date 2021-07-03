@@ -48,4 +48,4 @@ You have to keep using `wcd` istead to vanilla `cd` because `wcd` tracks your la
 
 ## Copyright
 
-Copyright (c) 2020 Michael Chen. Licensed under MIT.
+Copyright (c) 2020 Michelle Chen. Licensed under MIT

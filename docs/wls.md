@@ -42,4 +42,4 @@ Show hidden directories and files on current working directory:
 
 ## Copyright
 
-Copyright (c) 2020 Michael Chen. Licensed under MIT.
+Copyright (c) 2020 Michelle Chen. Licensed under MIT

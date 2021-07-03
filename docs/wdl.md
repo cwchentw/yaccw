@@ -34,4 +34,4 @@ On Windows, `Invoke-WebRequest` cmdlet is only supported on PowerShell 3.0 or ab
 
 ## Copyright
 
-Copyright (c) 2020 Michael Chen. Licensed under MIT.
+Copyright (c) 2020 Michelle Chen. Licensed under MIT
